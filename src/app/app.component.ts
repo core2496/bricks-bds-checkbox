@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      checkBoxThree: [{value:true, disabled:false}],
+      checkBoxThree: [{value:false, disabled:false}],
     });
   }
 
@@ -31,7 +31,8 @@ export class AppComponent implements OnInit {
 
   handleSubmit():void {
     this.formValue = this.form.value;
-    console.log(this.formValue)
+    console.log(this.formValue);
+    alert(`Form Value: ${ Object.keys(this.formValue)[0]} - ${this.formValue.checkBoxThree} `)
   }
 
  
