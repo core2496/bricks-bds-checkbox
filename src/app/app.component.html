@@ -1,0 +1,39 @@
+<h1>BDS-CHECKBOX</h1>
+<h2>Simple Check box</h2>
+<bds-checkbox 
+    value="1" 
+    label="Dog" 
+    disabled="false" 
+    theme="pacasmayo" 
+    inversed="false" 
+    indeterminate="false"
+    error="false"
+    (changeChecked)="handleChange($event)"
+/>
+
+<h2>CheckBox with two By Data Binding</h2> 
+<bds-checkbox 
+    value="1" 
+    label="Dog" 
+    disabled="false" 
+    theme="pacasmayo" 
+    inversed="false" 
+    indeterminate="false"
+    error="false"
+    [(ngModel)]="checkBoxTwo" 
+/>
+<button (click)="handleToogleCheckBox()">Toogle</button>
+
+<h2>CheckBox with Reactive Form</h2>
+<form [formGroup]="form">
+  <bds-checkbox 
+    value="1" 
+    label="Dog" 
+    theme="pacasmayo" 
+    inversed="false" 
+    indeterminate="false"
+    error="false"
+    formControlName="checkBoxThree" 
+/>
+</form>
+<button (click)="handleSubmit()" >Submit</button>
